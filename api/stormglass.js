@@ -11,6 +11,7 @@ export default async function handler(req, res) {
 
     const txt = await r.text();
     res.status(r.status).send(txt);
+
   } catch (err) {
     res.status(500).json({ error: "Erreur serveur", details: err });
   }
